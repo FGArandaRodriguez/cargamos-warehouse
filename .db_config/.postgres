@@ -1,0 +1,6 @@
+#Configuramos las variables de entorno para conectarse a la bd postgres
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=cargamos
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
