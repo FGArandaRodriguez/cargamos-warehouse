@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+    postgres:
+        image: "postgres:latest"
+        env_file:
+            - ./.db_config/.postgres
+        networks:
+            - db_nw
+    flask:
+        build:
+            context: .
+            dockerfile: ./docker-file/Dockerfile
+        volumes:
+            - .:/app
+        env_file:
+            - ./.db_config/.flask
+            - ./.db_config/.postgres
+        ports:
+            - "5000:5000"
+        image: cargamos_api_test
+        networks:
+            - db_nw
+        
+networks:
+    db_nw:
+        driver: bridge

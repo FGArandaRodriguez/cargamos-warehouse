@@ -1,0 +1,10 @@
+#En este archivo pondremos las librerìas a usar.
+flask
+flask-restful
+flask-restplus
+#usaremos Werkzeug para lanzar la app flask
+Werkzeug==0.16.1
+#usaremos SQLAlchemy como ORM debasede datos
+flask-sqlalchemy
+#Usaremos Psycopg2 como un conector entre postgres y nuestra aplicación python
+psycopg2
